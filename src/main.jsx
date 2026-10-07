@@ -1,6 +1,6 @@
 import React,{useState}from"react";
 import{createRoot}from"react-dom/client";
-import{Github,Menu,X,ArrowUpRight,BarChart3,Code2,Database,Palette,Sparkles,Mail,ExternalLink}from"lucide-react";
+import{Menu,X,ArrowUpRight,BarChart3,Code2,Database,Palette,Sparkles,Mail,ExternalLink}from"lucide-react";
 import"./style.css";
 
 const projects=[
@@ -17,7 +17,7 @@ function App(){
  return <div className="app">
   <header><div className="nav">
    <button className="brand" onClick={()=>go("home")}>🌷 <b>Janelle Kaye</b></button>
-   <nav className={open?"open":""}>{["home","about","skills","projects","contact"].map(x=><button key={x} onClick={()=>go(x)}>{x[0].toUpperCase()+x.slice(1)}</button>)}<a href="https://github.com/jkayekaye" target="_blank"> <Github size={16}/> GitHub</a></nav>
+   <nav className={open?"open":""}>{["home","about","skills","projects","contact"].map(x=><button key={x} onClick={()=>go(x)}>{x[0].toUpperCase()+x.slice(1)}</button>)}<a href="https://github.com/jkayekaye" target="_blank"> <span className="ghmark">GH</span> GitHub</a></nav>
    <button className="menu" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button>
   </div></header>
 
@@ -27,7 +27,7 @@ function App(){
      <h1>Hi, I'm <span>Janelle Kaye</span>! 🌷</h1>
      <h2>IT Student · Aspiring Data Analyst · UI/UX Enthusiast</h2>
      <p>I enjoy creating websites, developing systems, exploring data, and turning ideas into simple and useful digital experiences.</p>
-     <div className="actions"><button className="primary" onClick={()=>go("projects")}>View My Projects <ArrowUpRight size={17}/></button><a className="secondary" href="https://github.com/jkayekaye" target="_blank"><Github size={17}/> GitHub</a></div>
+     <div className="actions"><button className="primary" onClick={()=>go("projects")}>View My Projects <ArrowUpRight size={17}/></button><a className="secondary" href="https://github.com/jkayekaye" target="_blank"><span className="ghmark">GH</span> GitHub</a></div>
      <div className="facts"><span>📊 Data Analysis</span><span>💻 Web Development</span><span>🎨 UI/UX</span></div>
     </div>
     <div className="hero-art"><div className="orbit a">📊</div><div className="orbit b">💻</div><div className="orbit c">🎨</div><div className="profile"><div className="avatar">JK</div><div>✿　♡　✿</div><h3>Janelle Kaye</h3><p>Building my skills one project at a time.</p><small>● Always learning</small></div></div>
@@ -47,7 +47,7 @@ function App(){
 
    <section className="goal"><div className="wrap goalin"><div><small>04 · CAREER GOAL</small><h2>Turning data into useful insights. 📊</h2><p>My goal is to become a Data Analyst and use technology and data to understand problems, find patterns, and support better decisions.</p><div className="path"><span>Python</span>→<span>SQL</span>→<span>Cleaning</span>→<span>Visualization</span>→<span>Insights</span></div></div><div className="goalbadge">📊<b>Data</b><small>with purpose</small></div></div></section>
 
-   <section id="contact" className="section wrap contact"><div className="contactcard"><div>🌷</div><small>05 · LET'S CONNECT</small><h2>Thanks for visiting my portfolio! ♡</h2><p>I'm always happy to learn, build, and connect with other people who love technology.</p><div className="actions center"><a className="primary" href="https://github.com/jkayekaye" target="_blank"><Github size={17}/> Visit My GitHub</a><a className="secondary" href="mailto:your-email@example.com"><Mail size={17}/> Email Me</a></div><em>Replace the email link with your public email address.</em></div></section>
+   <section id="contact" className="section wrap contact"><div className="contactcard"><div>🌷</div><small>05 · LET'S CONNECT</small><h2>Thanks for visiting my portfolio! ♡</h2><p>I'm always happy to learn, build, and connect with other people who love technology.</p><div className="actions center"><a className="primary" href="https://github.com/jkayekaye" target="_blank"><span className="ghmark">GH</span> Visit My GitHub</a><a className="secondary" href="mailto:your-email@example.com"><Mail size={17}/> Email Me</a></div><em>Replace the email link with your public email address.</em></div></section>
   </main>
   <footer><div className="wrap foot"><span>Made with ♡ by Janelle Kaye</span><span>🌷 Keep learning. Keep building.</span></div></footer>
  </div>
